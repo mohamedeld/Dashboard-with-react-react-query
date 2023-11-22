@@ -86,7 +86,9 @@ function Body({ data, render }) {
   if (!data.length) return <Empty>No data to show at this moment</Empty>;
   return <StyledBody>{data.map(render)}</StyledBody>;
 }
-function Footer({ children }) {}
+function Footer({ children }) {
+  return <StyledFooter>{children}</StyledFooter>;
+}
 Table.Header = Header;
 Table.Row = Row;
 Table.Body = Body;
