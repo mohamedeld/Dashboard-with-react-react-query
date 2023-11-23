@@ -7,7 +7,7 @@ export default function useCheckout() {
   const { isLoading: isCheckout, mutate: checkOutMutate } = useMutation({
     mutationFn: (bookingId) =>
       updateBooking(bookingId, {
-        status: "checked-in",
+        status: "checked-out",
       }),
     onSuccess: (data) => {
       toast.success(`Booking #${data.id} successfully checked in`);
